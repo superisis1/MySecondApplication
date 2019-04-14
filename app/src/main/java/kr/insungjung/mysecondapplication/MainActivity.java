@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText idText;
@@ -33,13 +35,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String userInputStr = idText.getText().toString();
-                String userPassStr = idText.getText().toString();
-                String userInfo = "아이디: " + userInputStr + " 비번: " + userPassStr;
+                String userIdStr = idText.getText().toString();
+                String userPassStr = passText.getText().toString();
+//                String userInfo = "아이디: " + userIdStr + " 비번: " + userPassStr;
 
-                logoText.setText(userInfo);
+//                logoText.setText(userInfo);
+                logoText.setText(String.format("ID: %s, PW: %s", userIdStr, userPassStr));
 
-                Toast.makeText(MainActivity.this, userInputStr, Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, userIdStr, Toast.LENGTH_SHORT).show();
 
             }
         });
