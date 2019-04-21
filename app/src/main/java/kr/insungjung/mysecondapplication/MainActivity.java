@@ -1,16 +1,13 @@
 package kr.insungjung.mysecondapplication;
 
-import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,9 +35,10 @@ public class MainActivity extends AppCompatActivity {
                 String userIdStr = idText.getText().toString();
                 String userPassStr = passText.getText().toString();
 //                String userInfo = "아이디: " + userIdStr + " 비번: " + userPassStr;
-
 //                logoText.setText(userInfo);
+
                 logoText.setText(String.format("ID: %s, PW: %s", userIdStr, userPassStr));
+//                String userInfo = String.format("ID: %s, PW: %s", userIdStr, userPassStr;
 
                 Toast.makeText(MainActivity.this, userIdStr, Toast.LENGTH_SHORT).show();
 
@@ -48,3 +46,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
+
+
+
+
+
+
